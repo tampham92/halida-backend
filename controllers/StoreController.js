@@ -51,15 +51,6 @@ const updateStore = async (req, res) => {
     console.log(fromData);
 
     const update = await service.updateObject(fromData);
-    console.log(update);
-    // const deleteObject = await service.deleteObject(findObject);
-    // if (!deleteObject) {
-    //     return res.json({
-    //         status: 500,
-    //         message: 'Something went wrong!'
-    //     })
-    // }
-
     return res.json({
         status: 200,
         data: update
