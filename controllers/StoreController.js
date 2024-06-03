@@ -57,7 +57,6 @@ const updateStore = async (req, res) => {
     })
 }
 
-
 const deleteStore = async (req, res) => {
     const findObject = await service.findObject(req.params.id);
     if (!findObject) {

@@ -3,12 +3,11 @@ const express = require('express');
 const router = express.Router();
 const storeCtr = require('../controllers/StoreController');
 const authCtr = require('../controllers/AuthController');
+const indexCtr = require('../controllers/IndexController')
 
 const entryPoint = '/api';
 
-router.get('/', (req, res) => {
-    res.send('Hello World!')
-});
+router.get('/', indexCtr.showStore);
 
 router.post(`${entryPoint}/login`, authCtr.login);
 
